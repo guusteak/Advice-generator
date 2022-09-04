@@ -11,3 +11,7 @@ function dataReady(data){
     document.querySelector("#advice-text").innerHTML = data.slip.advice;
     console.log(data.slip.advice)
 }
+let dice = document.querySelector("#diceclick");
+dice.addEventListener("click", refresh => {
+    location.reload();
+})

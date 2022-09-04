@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    font-family: "Manrope";
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, hsl(218, 23%, 16%) 20%, hsl(217, 19%, 38%));
+    overflow: hidden;
+}
+
+.container{
+    width: 50%;
+    max-width: 500px;
+    min-width: 400px;
+    text-align: center;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 15px;
+}
+.header{
+    margin-top: 1rem;
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+main{
+    color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 28px;
+    margin-bottom: 2rem;
+    color: hsl(193, 38%, 86%);
+}
+
+main > img{
+    width: 100%;
+}
+
+.dice{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice img{
+    position: absolute;
+    padding: 10px;
+    border: 1px solid hsl(150, 100%, 66%);
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+}
+
+.dice img:hover{
+    cursor: pointer;
+    filter: brightness(120%);
+    animation-name: roll;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes roll{
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .container{
+        width: 80%;
+        min-width: 300px;
+
+    }
+}
