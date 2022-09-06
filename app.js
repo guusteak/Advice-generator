@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    let ok = fetch("https://api.adviceslip.com/advice").then( response => response.json() ).then( data => dataReady(data));
+    let ok = fetch("https://api.adviceslip.com/advice", {cache: 'no-cache'}).then( response => response.json() ).then( data => dataReady(data));
     console.log(ok);
 }
 
