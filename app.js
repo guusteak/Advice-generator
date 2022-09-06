@@ -1,8 +1,11 @@
 window.onload = function() {
-    console.log("nigger workin");
 
     let ok = fetch("https://api.adviceslip.com/advice").then( response => response.json() ).then( data => dataReady(data));
     console.log(ok);
+}
+
+function delay(time){
+    return new Promise(resolve => setTimeout(resolve, time));
 }
 
 function dataReady(data){
@@ -13,5 +16,6 @@ function dataReady(data){
 }
 let dice = document.querySelector("#diceclick");
 dice.addEventListener("click", refresh => {
+    delay(1000);
     location.reload();
 })
